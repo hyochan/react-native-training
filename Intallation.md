@@ -42,7 +42,7 @@ brew install watchman
 
 ## Android installation
 ### Install [java](https://www.oracle.com/technetwork/java/javase/downloads/index.html)
-If you are facing "React Native error: “Could not determine java version from '9.0.1'." error message, in `PROJECT_PATH/android/gradle/wrapper/gradle-wrapper.properties`, update `distributionUrl` to `distributionUrl=https\://services.gradle.org/distributions/gradle-5.0-all.zip`.
+If you are facing "React Native error: “Could not determine java version from '*.*.*'." error message, in `PROJECT_PATH/android/gradle/wrapper/gradle-wrapper.properties`, update `distributionUrl` to `distributionUrl=https\://services.gradle.org/distributions/gradle-5.0-all.zip`.
 ### Install [android studio](https://developer.android.com/studio/?hl=ko)
 Create new android project to make [android avd manager](http://www.androiddocs.com/tools/help/avd-manager.html) available.
 Start your `avd manager` then create your android emulator.
