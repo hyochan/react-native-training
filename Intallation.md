@@ -1,0 +1,45 @@
+# Install react-native
+
+### Install Node.js
+React-Native requires [nodejs](https://nodejs.org/) and [npm](npmjs.com) installed in your machine.
+It's recommeneded to use [nvm](https://github.com/creationix/nvm) to install both `node` and `npm`.
+
+```sh
+$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+```
+
+Check nvm version by running
+```
+$ nvm --version
+```
+
+You can now install `nodejs` and `npm` via `nvm`.
+```
+// This will install latest version of node version 10 which is 10.14.2 currently.
+$ nvm install 10
+
+// Below command will set default node version for nvm
+$ nvm alias default 10.14.2
+```
+
+Now check `nodejs` and `npm` version.
+```
+$ node -v
+10.14.2
+$ npm -v
+6.4.1
+```
+
+### Install watchman (Mac & Linux only, Window is currently in beta)
+[Watchman](https://facebook.github.io/watchman/) is a tool by Facebook for watching changes in the filesystem. This isn't necessary be installed but it will enhance the performace of your dev env.
+```
+brew install watchman
+```
+
+## iOS Installation
+### Install [xcode](https://developer.apple.com/kr/xcode/)
+
+
+## Android installation
+### Install [java](https://www.oracle.com/technetwork/java/javase/downloads/index.html)
+### Install [android studio](https://developer.android.com/studio/?hl=ko)
