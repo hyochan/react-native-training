@@ -1,6 +1,6 @@
 # Install react-native
 
-### Install Node.js
+#### Install Node.js
 React-Native requires [nodejs](https://nodejs.org/) and [npm](npmjs.com) installed in your machine.
 It's recommeneded to use [nvm](https://github.com/creationix/nvm) to install both `node` and `npm`.
 
@@ -30,19 +30,36 @@ $ npm -v
 6.4.1
 ```
 
-### Install watchman (Mac & Linux only, Window is currently in beta)
-[Watchman](https://facebook.github.io/watchman/) is a tool by Facebook for watching changes in the filesystem. This isn't necessary be installed but it will enhance the performace of your dev env.
-```
-brew install watchman
-```
-
-## iOS Installation
-### Install [xcode](https://developer.apple.com/kr/xcode/)
+#### iOS installation
+* Install [xcode](https://developer.apple.com/kr/xcode/)
 
 
-## Android installation
-### Install [java](https://www.oracle.com/technetwork/java/javase/downloads/index.html)
-If you are facing "React Native error: “Could not determine java version from '*.*.*'." error message, in `PROJECT_PATH/android/gradle/wrapper/gradle-wrapper.properties`, update `distributionUrl` to `distributionUrl=https\://services.gradle.org/distributions/gradle-5.0-all.zip`.
-### Install [android studio](https://developer.android.com/studio/?hl=ko)
+#### Android installation
+* Install [java](https://www.oracle.com/technetwork/java/javase/downloads/index.html)
+If you are facing "React Native error: “Could not determine java version from '9.0.1'." error message, in `PROJECT_PATH/android/gradle/wrapper/gradle-wrapper.properties`, update `distributionUrl` to `distributionUrl=https\://services.gradle.org/distributions/gradle-5.0-all.zip`.
+* Install [android studio](https://developer.android.com/studio/?hl=ko)
 Create new android project to make [android avd manager](http://www.androiddocs.com/tools/help/avd-manager.html) available.
 Start your `avd manager` then create your android emulator.
+
+#### React Native installation
+* Install watchman (Mac & Linux only, Window is currently in beta)
+[Watchman](https://facebook.github.io/watchman/) is a tool by Facebook for watching changes in the filesystem. This isn't necessary be installed but it will enhance the performace of your dev env.
+  ```
+  brew install watchman
+  ```
+* Install `react-native-cli` as global npm package.
+  ```
+  npm install -g react-native-cli
+  ```
+* Create react-native project
+  ```
+  react-native init [PROJECT_NAME]
+  ```
+* Run your project
+  ```
+  $ cd [PROJECT_NAME]
+  // run ios
+  $ react-native run-ios
+  // run android
+  $ react-native run-android
+  ```
