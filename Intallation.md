@@ -32,7 +32,12 @@ $ npm -v
 
 #### iOS installation
 * Install [xcode](https://developer.apple.com/kr/xcode/)
-
+* Troubleshoot
+  ```
+  $ sudo xcode-select -s /Applications/Xcode.app
+  $ xcode-select --install
+  $ sudo xcodebuild -license accept
+  ```
 
 #### Android installation
 * Install [java](https://www.oracle.com/technetwork/java/javase/downloads/index.html)
