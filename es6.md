@@ -1,5 +1,6 @@
 # ES6
 ### String Literal
+[Source](https://github.com/hyochan/react-native-training/blob/master/es6/string_literal.js)
 ```
 const val1 = 'my string1';
 const val2 = 'my string2';
@@ -15,6 +16,7 @@ console.log(litVal);
 ``` 
 
 ### Destructure object & array
+[Source](https://github.com/hyochan/react-native-training/blob/master/es6/destructure_object_array.js)
 ```
 const address = {
   country: 'South Korea',
