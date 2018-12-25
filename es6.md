@@ -51,3 +51,12 @@ function getAddress(country, city, street) {
 
 getAddress('Japan', 'Osaka', 'street');
 ```
+
+### for..of
+[Source](https://github.com/hyochan/react-native-training/blob/master/es6/for..of.js)
+```
+for (var i in years) {
+  console.log(typeof i);
+  console.log(years[i]);
+}
+```
