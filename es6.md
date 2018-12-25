@@ -94,3 +94,22 @@ let address2 = {
 };
 console.log(address2);
 ```
+
+### Rest Operator
+[Source](https://github.com/hyochan/react-native-training/blob/master/es6/rest_operator.js)
+
+```
+// Rest Operator
+
+// past
+// function printYears(years) {
+//   console.log(arguments);
+// }
+
+// now
+function printYears(...years) {
+  console.log(years);
+}
+
+printYears(2000, 2001, 2010, 2015, 2018);
+```
