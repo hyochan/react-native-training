@@ -97,7 +97,6 @@ console.log(address2);
 
 ### Rest Operator
 [Source](https://github.com/hyochan/react-native-training/blob/master/es6/rest_operator.js)
-
 ```
 // Rest Operator
 
@@ -112,4 +111,42 @@ function printYears(...years) {
 }
 
 printYears(2000, 2001, 2010, 2015, 2018);
+```
+
+### Arrow Functions
+[Source](https://github.com/hyochan/react-native-training/blob/master/es6/arrow_functions.js)
+```
+// Arrow Functions
+const years = [
+  {
+    year: 2000,
+    data: '크리스마스',
+  },
+  {
+    year: 2001,
+    data: '롤리팝',
+  },
+  {
+    year: 2010,
+    data: '안드로이드',
+  },
+  {
+    year: 2015,
+    data: '리엑트네이티브',
+  },
+  {
+    year: 2018,
+    data: '곧 2019',
+  },
+];
+
+// past
+// const result = years.filter(function (data) {
+//   return data.year > 2000;
+// });
+
+// arrow function
+const result = years.filter((data) => data.year > 2000);
+
+console.log(result);
 ```
