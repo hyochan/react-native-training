@@ -1,7 +1,7 @@
 # ES6
 ### String Literal
 [Source](https://github.com/hyochan/react-native-training/blob/master/es6/string_literal.js)
-```
+```javascript
 const val1 = 'my string1';
 const val2 = 'my string2';
 
@@ -17,7 +17,7 @@ console.log(litVal);
 
 ### Destructure object & array
 [Source](https://github.com/hyochan/react-native-training/blob/master/es6/destructure_object_array.js)
-```
+```javascript
 const address = {
   country: 'South Korea',
   city: 'Seoul',
@@ -54,7 +54,7 @@ getAddress('Japan', 'Osaka', 'street');
 
 ### for..of
 [Source](https://github.com/hyochan/react-native-training/blob/master/es6/for..of.js)
-```
+```javascript
 for (var i in years) {
   console.log(typeof i);
   console.log(years[i]);
@@ -63,7 +63,7 @@ for (var i in years) {
 
 ### Spread Operator
 [Source](https://github.com/hyochan/react-native-training/blob/master/es6/spread_operator.js)
-```
+```javascript
 // Spread Operator
 // let years = [2001, 2010, 2015, 2018];
 // let yearsCp = [2000, ...years, 2020];
@@ -97,7 +97,7 @@ console.log(address2);
 
 ### Rest Operator
 [Source](https://github.com/hyochan/react-native-training/blob/master/es6/rest_operator.js)
-```
+```javascript
 // Rest Operator
 
 // past
@@ -115,7 +115,7 @@ printYears(2000, 2001, 2010, 2015, 2018);
 
 ### Arrow Functions
 [Source](https://github.com/hyochan/react-native-training/blob/master/es6/arrow_functions.js)
-```
+```javascript
 // Arrow Functions
 const years = [
   {
@@ -153,7 +153,7 @@ console.log(result);
 
 ### Defalut Params
 [Source](https://github.com/hyochan/react-native-training/blob/master/es6/default_params.js)
-```
+```javascript
 // Default Params
 const defaultValue = [
   {
@@ -187,7 +187,7 @@ printYears();
 
 ### Includes
 [Source](https://github.com/hyochan/react-native-training/blob/master/es6/includes.js)
-```
+```javascript
 // includes
 // let years = [2001, 2010, 2015, 2018];
 const fruits = ['apple', 'banana', 'potato'];
@@ -198,3 +198,38 @@ const fruits = ['apple', 'banana', 'potato'];
 
 console.log(fruits.includes('apple'));
 ```
+
+### let & const
+[Source](https://github.com/hyochan/react-native-training/blob/master/es6/es6&const.js)
+```javascript
+// let & const
+
+// var is hoisting
+// ECMA Script 2015 = es6
+console.log(myId);
+if (true) {
+  let myId = 'dooboolab';
+}
+
+// const
+// object
+const fruit = {};
+fruit.first = 'apple';
+console.log(fruit);
+// array
+const apples = [0, 1, 2];
+apples[0] = 5;
+console.log(apples);
+```
+
+### Import & export
+[Source](https://github.com/hyochan/react-native-training/blob/master/es6/import&export.js)
+```javascript
+// import & export
+
+import root from './includes';
+import { fruits } from './includes';
+console.log(root);
+console.log(fruits);
+```
+
