@@ -291,3 +291,26 @@ let cat = new Cat('Cat', true, 'yellow');
 cat.cry();
 console.log(cat);
 ```
+
+### Trailing Commas
+[Source](https://github.com/hyochan/react-native-training/blob/master/es6/trailing_commas.js)
+```javascript
+// Trailing Commas
+const myObj = {
+  first: 'test1',
+  second: 'test2',
+};
+
+console.log(myObj);
+
+const myArr = [
+  1,
+  2,
+  3,
+  3,
+  3,
+  3,
+  3,
+];
+console.log(myArr);
+```
