@@ -1,0 +1,206 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Intro component test renders as expected 1`] = `
+<Page
+  store={
+    ObservableListStore {
+      "rootNavigatorActionHorizontal": undefined,
+      "user": User {
+        "age": undefined,
+        "displayName": undefined,
+        "job": undefined,
+        Symbol(mobx did run lazy initializers): true,
+        Symbol(mobx administration): ObservableObjectAdministration$$1 {
+          "defaultEnhancer": [Function],
+          "keysAtom": Atom$$1 {
+            "diffValue": 0,
+            "isBeingObserved": false,
+            "isPendingUnobservation": false,
+            "lastAccessedBy": 0,
+            "lowestObserverState": 2,
+            "name": "User@3.keys",
+            "observers": Set {},
+          },
+          "name": "User@3",
+          "target": [Circular],
+          "values": Map {
+            "displayName" => undefined,
+            "age" => undefined,
+            "job" => undefined,
+          },
+        },
+      },
+      Symbol(mobx did run lazy initializers): true,
+      Symbol(mobx administration): ObservableObjectAdministration$$1 {
+        "defaultEnhancer": [Function],
+        "keysAtom": Atom$$1 {
+          "diffValue": 0,
+          "isBeingObserved": false,
+          "isPendingUnobservation": false,
+          "lastAccessedBy": 0,
+          "lowestObserverState": 2,
+          "name": "ObservableListStore@2.keys",
+          "observers": Set {},
+        },
+        "name": "ObservableListStore@2",
+        "target": [Circular],
+        "values": Map {
+          "rootNavigatorActionHorizontal" => undefined,
+          "user" => User {
+            "age": undefined,
+            "displayName": undefined,
+            "job": undefined,
+            Symbol(mobx did run lazy initializers): true,
+            Symbol(mobx administration): ObservableObjectAdministration$$1 {
+              "defaultEnhancer": [Function],
+              "keysAtom": Atom$$1 {
+                "diffValue": 0,
+                "isBeingObserved": false,
+                "isPendingUnobservation": false,
+                "lastAccessedBy": 0,
+                "lowestObserverState": 2,
+                "name": "User@3.keys",
+                "observers": Set {},
+              },
+              "name": "User@3",
+              "target": [Circular],
+              "values": Map {
+                "displayName" => undefined,
+                "age" => undefined,
+                "job" => undefined,
+              },
+            },
+          },
+        },
+      },
+    }
+  }
+/>
+`;
+
+exports[`Intro renders without crashing 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "rgb(65, 77, 107)",
+      "flex": 1,
+      "flexDirection": "column",
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "white",
+        "fontSize": 28,
+        "marginTop": 100,
+      }
+    }
+  >
+    DOOBOO NATIVE
+  </Text>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "marginTop": 80,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#eee",
+          "fontSize": 16,
+          "lineHeight": 48,
+        }
+      }
+    />
+    <Text
+      style={
+        Object {
+          "color": "#eee",
+          "fontSize": 16,
+          "lineHeight": 48,
+        }
+      }
+    />
+    <Text
+      style={
+        Object {
+          "color": "#eee",
+          "fontSize": 16,
+          "lineHeight": 48,
+        }
+      }
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "bottom": 40,
+        "position": "absolute",
+      }
+    }
+  >
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "center",
+            "backgroundColor": "transparent",
+            "borderColor": "white",
+            "borderRadius": 4,
+            "borderWidth": 2,
+            "height": 52,
+            "justifyContent": "center",
+            "width": 320,
+          }
+        }
+      >
+        <Image
+          source={
+            Object {
+              "testUri": "../../../assets/icons/mask.png",
+            }
+          }
+          style={
+            Object {
+              "height": 24,
+              "left": 16,
+              "position": "absolute",
+              "width": 24,
+            }
+          }
+        />
+        <Text
+          style={
+            Object {
+              "color": "white",
+              "fontSize": 14,
+            }
+          }
+        >
+          Login
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;

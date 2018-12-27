@@ -1,0 +1,19 @@
+{
+  "presets": ["react-native", "@babel/flow"],
+  "plugins": [
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+        "legacy": true
+      }
+    ],
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "helpers": true,
+        "polyfill": false,
+        "regenerator": false
+      }
+    ]
+  ]
+}
