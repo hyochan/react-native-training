@@ -63,10 +63,11 @@ class Screen extends Component<Props, State> {
           }}
           value={
             Platform.select({
-              ios: this.txt,
+              ios: this.text,
               android: this.state.text,
             })
           }
+          defaultValue='default'
         />
       </View>
     );

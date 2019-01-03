@@ -104,7 +104,12 @@ class Screen extends Component<Props, State> {
       <View style={styles.container}>
         <KeyboardAvoidingView
           style={ styles.content }
-          behavior='padding'
+          behavior={
+            Platform.select({
+              android: null,
+              ios: 'padding',
+            })
+          }
           enabled
           keyboardVerticalOffset={84}
         >

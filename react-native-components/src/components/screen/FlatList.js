@@ -41,6 +41,14 @@ class Screen extends Component<Props, State> {
       {},
       {},
       {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
     ],
   };
 
@@ -65,7 +73,7 @@ class Screen extends Component<Props, State> {
           style={{
             alignSelf: 'stretch',
           }}
-          // numColumns={3}
+          // numColumns={3} // Gridview
           keyExtractor={(item, index) => index.toString()}
           data={this.state.data}
           renderItem={this.renderItem}
