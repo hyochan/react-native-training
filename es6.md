@@ -1,6 +1,6 @@
 # ES6
 ### String Literal
-[Source](https://github.com/hyochan/react-native-training/blob/master/es6/string_literal.js)
+[Source](https://github.com/dooboolab/react-native-training/blob/master/es6/string_literal.js)
 ```javascript
 const val1 = 'my string1';
 const val2 = 'my string2';
@@ -16,7 +16,7 @@ console.log(litVal);
 ``` 
 
 ### Destructure object & array
-[Source](https://github.com/hyochan/react-native-training/blob/master/es6/destructure_object_array.js)
+[Source](https://github.com/dooboolab/react-native-training/blob/master/es6/destructure_object_array.js)
 ```javascript
 const address = {
   country: 'South Korea',
@@ -53,7 +53,7 @@ getAddress('Japan', 'Osaka', 'street');
 ```
 
 ### for..of
-[Source](https://github.com/hyochan/react-native-training/blob/master/es6/for..of.js)
+[Source](https://github.com/dooboolab/react-native-training/blob/master/es6/for..of.js)
 ```javascript
 for (var i in years) {
   console.log(typeof i);
@@ -62,7 +62,7 @@ for (var i in years) {
 ```
 
 ### Spread Operator
-[Source](https://github.com/hyochan/react-native-training/blob/master/es6/spread_operator.js)
+[Source](https://github.com/dooboolab/react-native-training/blob/master/es6/spread_operator.js)
 ```javascript
 // Spread Operator
 // let years = [2001, 2010, 2015, 2018];
@@ -96,7 +96,7 @@ console.log(address2);
 ```
 
 ### Rest Operator
-[Source](https://github.com/hyochan/react-native-training/blob/master/es6/rest_operator.js)
+[Source](https://github.com/dooboolab/react-native-training/blob/master/es6/rest_operator.js)
 ```javascript
 // Rest Operator
 
@@ -114,7 +114,7 @@ printYears(2000, 2001, 2010, 2015, 2018);
 ```
 
 ### Arrow Functions
-[Source](https://github.com/hyochan/react-native-training/blob/master/es6/arrow_functions.js)
+[Source](https://github.com/dooboolab/react-native-training/blob/master/es6/arrow_functions.js)
 ```javascript
 // Arrow Functions
 const years = [
@@ -152,7 +152,7 @@ console.log(result);
 ```
 
 ### Defalut Params
-[Source](https://github.com/hyochan/react-native-training/blob/master/es6/default_params.js)
+[Source](https://github.com/dooboolab/react-native-training/blob/master/es6/default_params.js)
 ```javascript
 // Default Params
 const defaultValue = [
@@ -186,7 +186,7 @@ printYears();
 ```
 
 ### Includes
-[Source](https://github.com/hyochan/react-native-training/blob/master/es6/includes.js)
+[Source](https://github.com/dooboolab/react-native-training/blob/master/es6/includes.js)
 ```javascript
 // includes
 // let years = [2001, 2010, 2015, 2018];
@@ -200,7 +200,7 @@ console.log(fruits.includes('apple'));
 ```
 
 ### let & const
-[Source](https://github.com/hyochan/react-native-training/blob/master/es6/es6&const.js)
+[Source](https://github.com/dooboolab/react-native-training/blob/master/es6/es6&const.js)
 ```javascript
 // let & const
 
@@ -223,7 +223,7 @@ console.log(apples);
 ```
 
 ### Import & export
-[Source](https://github.com/hyochan/react-native-training/blob/master/es6/import&export.js)
+[Source](https://github.com/dooboolab/react-native-training/blob/master/es6/import&export.js)
 ```javascript
 // import & export
 
@@ -234,7 +234,7 @@ console.log(fruits);
 ```
 
 ### Classes
-[Source](https://github.com/hyochan/react-native-training/blob/master/es6/classes.js)
+[Source](https://github.com/dooboolab/react-native-training/blob/master/es6/classes.js)
 ```javascript
 // Classes
 // es5
@@ -293,7 +293,7 @@ console.log(cat);
 ```
 
 ### Trailing Commas
-[Source](https://github.com/hyochan/react-native-training/blob/master/es6/trailing_commas.js)
+[Source](https://github.com/dooboolab/react-native-training/blob/master/es6/trailing_commas.js)
 ```javascript
 // Trailing Commas
 const myObj = {
@@ -316,7 +316,7 @@ console.log(myArr);
 ```
 
 ### Map & Set
-[Source](https://github.com/hyochan/react-native-training/blob/master/es6/map_set.js)
+[Source](https://github.com/dooboolab/react-native-training/blob/master/es6/map_set.js)
 ```javascript
 // Map
 let map = new Map([['id', 'dooboolab']]);
@@ -348,7 +348,7 @@ console.log(set.size);
 ```
 
 ### Async & Await
-[Source](https://github.com/hyochan/react-native-training/blob/master/es6/async_await.js)
+[Source](https://github.com/dooboolab/react-native-training/blob/master/es6/async_await.js)
 ```javascript
 // Map
 let map = new Map([['id', 'dooboolab']]);
