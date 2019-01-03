@@ -1,7 +1,7 @@
 # React Native Components
 
 ### [Button](https://facebook.github.io/react-native/docs/button)
-![button](https://github.com/dooboolab/react-native-training/blob/master/react-native-components/imgs/button.png)
+![button](https://user-images.githubusercontent.com/27461460/50632096-21e3ee00-0f8a-11e9-8b70-2fae8ed774a6.png)
 
 ### [ActivityIndicator](https://facebook.github.io/react-native/docs/activityindicator)
 ![image](https://user-images.githubusercontent.com/27461460/50632107-28726580-0f8a-11e9-83b5-806b08fc9b22.png)
