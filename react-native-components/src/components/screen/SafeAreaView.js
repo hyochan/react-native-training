@@ -14,6 +14,7 @@ import { ratio, colors } from '../../utils/Styles';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    width: '100%',
     backgroundColor: 'transparent',
     flexDirection: 'column',
     alignItems: 'center',
@@ -39,8 +40,14 @@ class Screen extends Component<Props, State> {
   render() {
     return (
       <View style={styles.container}>
-        <SafeAreaView style={{flex: 1, backgroundColor: '#fff'}}>
-          <View style={{flex: 1}}>
+        <SafeAreaView style={{
+          flex: 1,
+          backgroundColor: '#fff',
+          width: '100%',
+        }}>
+          <View style={{
+            flex: 1, backgroundColor: 'blue', width: '100%',
+          }}>
             <Text>Hello World!</Text>
           </View>
         </SafeAreaView>

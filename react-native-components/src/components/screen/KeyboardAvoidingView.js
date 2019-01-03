@@ -106,7 +106,7 @@ class Screen extends Component<Props, State> {
           style={ styles.content }
           behavior='padding'
           enabled
-          keyboardVerticalOffset={64}
+          keyboardVerticalOffset={84}
         >
           <ScrollView style={{ alignSelf: 'stretch' }}>
             <TextInput

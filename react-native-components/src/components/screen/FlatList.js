@@ -65,6 +65,7 @@ class Screen extends Component<Props, State> {
           style={{
             alignSelf: 'stretch',
           }}
+          // numColumns={3}
           keyExtractor={(item, index) => index.toString()}
           data={this.state.data}
           renderItem={this.renderItem}
