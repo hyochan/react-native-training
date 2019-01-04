@@ -45,4 +45,5 @@ There are two objects(Props & State) passed to `Compoenent` in react.
 ### Style
 - Layout
   + Flexbox
+    - [Guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
     - [Froggy Game](https://flexboxfroggy.com/)
