@@ -60,3 +60,7 @@ In [React Native](https://facebook.github.io/react-native/), we design layout us
     - Difference bettween `flex-basis` and `width`?
       + `flex-basis` controls width or height depending on `flex-direction`.
       + `flex-basis` is only affected to `flex` items.
+
+- [View Style Props](https://facebook.github.io/react-native/docs/view-style-props#elevation)
+- [Text Style Props](https://facebook.github.io/react-native/docs/text-style-props#textalignvertical)
+- [Image Style Props](https://facebook.github.io/react-native/docs/images#static-image-resources)
