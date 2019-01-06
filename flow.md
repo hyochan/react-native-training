@@ -33,3 +33,13 @@ You should follow below tutorial to integrate in your `react-native` project.
     ```
 6. Run `npm run flow`.
     - You will see flow check output on files you've applied.
+
+* Note
+  - Use below `import` statement for style `type-definitions`.
+    ```
+    import type {
+      ____ViewStyleProp_Internal as ViewStyle,
+      ____TextStyleProp_Internal as TextStyle,
+      ____ImageStyleProp_Internal as ImageStyle,
+    } from 'react-native/Libraries/StyleSheet/StyleSheetTypes';
+    ```
