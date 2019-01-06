@@ -1,12 +1,4 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
-
-
+// @flow
 import React, {Component} from 'react';
 import {
   StyleSheet,
@@ -30,8 +22,14 @@ const colors = {
 }
 
 type Props = {};
-export default class App extends Component<Props> {
-  constructor(props) {
+type State = {
+  email: string,
+  password: string,
+  isLoggingin: boolean,
+};
+
+export default class App extends Component<Props, State> {
+  constructor(props: Props) {
     super(props);
     this.state = {
       email: '',
@@ -105,7 +103,7 @@ export default class App extends Component<Props> {
     );
   }
 
-  onTextChanged = (type, text) => {
+  onTextChanged = (type: string, text: string) => {
     switch(type) {
       case 'EMAIL':
         this.setState({

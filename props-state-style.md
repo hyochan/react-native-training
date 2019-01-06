@@ -64,3 +64,9 @@ In [React Native](https://facebook.github.io/react-native/), we design layout us
 - [View Style Props](https://facebook.github.io/react-native/docs/view-style-props#elevation)
 - [Text Style Props](https://facebook.github.io/react-native/docs/text-style-props#textalignvertical)
 - [Image Style Props](https://facebook.github.io/react-native/docs/images#static-image-resources)
+
+### Building screens
+You can navigate to [project]([Example Source](https://github.com/dooboolab/react-native-training/blob/master/building-screens)
+) to see how to build up the `screen` components.
+
+### Flow

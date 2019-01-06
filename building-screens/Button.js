@@ -1,3 +1,4 @@
+// @flow
 import React, {Component} from 'react';
 import {
   Platform,
@@ -9,7 +10,21 @@ import {
   Image,
 } from 'react-native';
 
-const styles = StyleSheet.create({
+import type {
+  ____ViewStyleProp_Internal as ViewStyle,
+  ____TextStyleProp_Internal as TextStyle,
+  ____ImageStyleProp_Internal as ImageStyle,
+} from 'react-native/Libraries/StyleSheet/StyleSheetTypes';
+
+type Styles = {
+  container: ViewStyle,
+  btn: ViewStyle,
+  btnDisabled: ViewStyle,
+  txt: TextStyle,
+  imgLeft: ImageStyle,
+}
+
+const styles: Styles = StyleSheet.create({
   container: {
     flex: 1,
   },
@@ -49,7 +64,20 @@ const styles = StyleSheet.create({
   },
 });
 
-type Props = {};
+type Props = {
+  containerStyle?: ViewStyle,
+  disabledStyle?: ViewStyle,
+  isLoading?: boolean,
+  isDisabled?: boolean,
+  style?: ViewStyle,
+  textStyle?: TextStyle,
+  imgLeftStyle?: ImageStyle,
+  indicatorColor?: string,
+  children?: string,
+  onPress?: () => void,
+  imgLeftSrc?: any,
+};
+
 export default class Shared extends Component<Props> {
   static defaultProps = {
     containerStyle: styles.container,
@@ -59,13 +87,14 @@ export default class Shared extends Component<Props> {
     textStyle: styles.txt,
     imgLeftStyle: styles.imgLeft,
     indicatorColor: 'white',
+    disabledStyle: styles.btnDisabled,
   }
 
   render() {
     if (this.props.isDisabled) {
       return (
         <View style={this.props.containerStyle}>
-          <View style={styles.props.disabledStyle}>
+          <View style={this.props.disabledStyle}>
             <Text style={this.props.textStyle}>{this.props.children}</Text>
           </View>
         </View>

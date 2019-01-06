@@ -1,11 +1,26 @@
+// @flow
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
+import type {
+  ____ViewStyleProp_Internal as ViewStyle,
+  ____TextStyleProp_Internal as TextStyle,
+  ____ImageStyleProp_Internal as ImageStyle,
+} from 'react-native/Libraries/StyleSheet/StyleSheetTypes';
+
 import Button from './Button';
 import TextInput from './TextInput';
 
 import { colors } from './App';
 
-const styles = StyleSheet.create({
+type Styles = {
+  container: ViewStyle,
+  wrapper: ViewStyle,
+  btnWrapper: ViewStyle,
+  btnRegister: ViewStyle,
+  txtRegister: TextStyle,
+};
+
+const styles: Styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'column', // row, column, row-reverse, column-reverse
@@ -57,9 +72,20 @@ const styles = StyleSheet.create({
   },
 });
 
-type Props = {};
-export default class Signup extends Component<Props> {
-  constructor(props) {
+type Props = {
+
+};
+
+type State = {
+  email?: string,
+  password?: string,
+  name?: string,
+  statusMsg?: string,
+  isRegistering?: boolean,
+};
+
+export default class Signup extends Component<Props, State> {
+  constructor(props: Props) {
     super(props);
     this.state = {
       email: '',
@@ -115,7 +141,7 @@ export default class Signup extends Component<Props> {
     );
   }
 
-  onTextChanged = (type, text) => {
+  onTextChanged = (type: string, text: string) => {
     switch(type) {
       case 'EMAIL':
         this.setState({

@@ -1,15 +1,11 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
-
-
+// @flow
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View, TextInput} from 'react-native';
-
+import type {
+  ____ViewStyleProp_Internal as ViewStyle,
+  ____TextStyleProp_Internal as TextStyle,
+  ____ImageStyleProp_Internal as ImageStyle,
+} from 'react-native/Libraries/StyleSheet/StyleSheetTypes';
 
 const colors = {
   background: '#e3e3e3',
@@ -20,7 +16,15 @@ const colors = {
   paleGray: 'rgb(233,237,244)',
 };
 
-const styles = StyleSheet.create({
+type Styles = {
+  wrapper: ViewStyle,
+  label: TextStyle,
+  labelFocus: TextStyle,
+  input: ViewStyle,
+  inputFocus: ViewStyle,
+}
+
+const styles: Styles = StyleSheet.create({
   wrapper: {
     alignSelf: 'stretch',
 
@@ -66,15 +70,32 @@ const styles = StyleSheet.create({
   },
 })
 
-type Props = {};
-export default class Shared extends Component<Props> {
+type Props = {
+  style?: ViewStyle,
+  inputStyle?: ViewStyle,
+  labelStyle?: TextStyle,
+  labelStyleFocus?: TextStyle,
+  onTextChanged?: (text: string) => void,
+  txtLabel?: string,
+  txtHint?: string,
+  placeholderTextColor?: string,
+  isPassword?: boolean,
+  txt?: string,
+  multiline?: boolean,
+};
+
+type State = {
+  focused: boolean
+};
+
+export default class Shared extends Component<Props, State> {
   static defaultProps = {
     style: styles.wrapper,
     labelStyle: styles.label,
     labelStyleFocus: styles.labelFocus,
   }
 
-  constructor(props) {
+  constructor(props: Props) {
     super(props);
     this.state = {
       focused: false,
