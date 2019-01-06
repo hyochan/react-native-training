@@ -106,7 +106,7 @@ export default class Shared extends Component<Props> {
           onBlur={ () => this.setState({ focused: false })}
           placeholder={this.props.txtHint}
           placeholderTextColor={this.props.placeholderTextColor}
-          secureText={this.props.isPassword}
+          secureTextEntry={this.props.isPassword}
         />
       </View>
     );

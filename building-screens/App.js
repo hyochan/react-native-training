@@ -1,14 +1,14 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
-
-
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
+
+export const colors = {
+  background: '#e3e3e3',
+  dodgerBlue: 'rgb(58,139,255)',
+  dusk: 'rgb(65,77,107)',
+  cloudyBlue: 'rgb(175,194,219)',
+  blueyGray: 'rgb(134,154,183)',
+  paleGray: 'rgb(233,237,244)',
+};
 
 type Props = {};
 export default class App extends Component<Props> {
@@ -23,7 +23,6 @@ export default class App extends Component<Props> {
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop: 50,
     flex: 1,
     flexDirection: 'row', // row, column, row-reverse, column-reverse
     // primary axis
