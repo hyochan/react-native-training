@@ -12,10 +12,12 @@ import {
   StyleSheet,
   Image,
   Text,
-  TextInput,
   TouchableOpacity,
   View,
 } from 'react-native';
+
+import TextInput from './TextInput';
+import Button from './Button';
 
 const colors = {
   background: '#e3e3e3',
@@ -34,6 +36,7 @@ export default class App extends Component<Props> {
     this.state = {
       email: '',
       password: '',
+      isLoggingin: false,
     };
   }
   render() {
@@ -46,30 +49,50 @@ export default class App extends Component<Props> {
         <View style={styles.wrapper}>
           <View style={styles.wrapperInput}>
             <TextInput
-              style={[
-                styles.input,
-                { marginTop: 60 },
-              ]}
-              value={this.state.email}
-              placeholder='Please write email address.'
+              style={{ marginTop: 60 }}
+              txt={this.state.email}
+              txtHint='Please write email address.'
               placeHolderTextColor={colors.blueyGray}
-              onChangeText={(text) => {
+              onTextChanged={(text) => {
                 this.onTextChanged('EMAIL', text);
               }}
             />
             <TextInput
-              style={[
-                styles.input,
-                { marginTop: 8 },
-              ]}
-              value={this.state.password}
-              placeholder='Please write password.'
+              style={{ marginTop: 8 }}
+              txt={this.state.password}
+              txtHint='Please write password.'
               placeHolderTextColor={colors.blueyGray}
-              onChangeText={(text) => {
+              onTextChanged={(text) => {
                 this.onTextChanged('PASSWORD', text);
               }}
-              secureTextEntry
+              isPassword
             />
+          </View>
+          <View style={styles.viewBtnWrapper}>
+            <Button
+              containerStyle={{ flex: 1 }}
+              onPress={() => {}}
+              style={styles.btnSignup}
+              textStyle={styles.txtSignup}
+            >Sign Up</Button>
+            <View style={{ width: 8 }}/>
+            <Button
+              containerStyle={{ flex: 1 }}
+              isLoading={this.state.isLoggingin}
+              onPress={() => {
+                this.setState({
+                  isLoggingin: true
+                }, () => {
+                  setTimeout(() => {
+                    this.setState({
+                      isLoggingin: false,
+                    });
+                  }, 3000);
+                })
+              }}
+              style={styles.btnLogin}
+              textStyle={styles.txtLogin}
+            >Login</Button>
           </View>
           <TouchableOpacity
             style={styles.touchForgotPw}
@@ -146,6 +169,54 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     borderWidth: 1,
     borderColor: colors.paleGray,
+  },
+  viewBtnWrapper: {
+    alignSelf: 'stretch',
+    marginTop: 20,
+    height: 60,
+
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  btnSignup: {
+    backgroundColor: 'transparent',
+    borderRadius: 4,
+    borderWidth: 1,
+    height: '100%',
+    width: '100%',
+    borderColor: colors.dodgerBlue,
+
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  txtSignup: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: colors.dodgerBlue,
+  },
+  btnLogin: {
+    backgroundColor: colors.dodgerBlue,
+    borderColor: colors.dodgerBlue,
+    borderRadius: 4,
+    borderWidth: 1,
+    height: 60,
+    shadowColor: colors.dodgerBlue,
+    shadowOffset: {
+      width: 0,
+      height: 10,
+    },
+    shadowRadius: 4,
+    shadowOpacity: 0.3,
+
+
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  txtLogin: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: 'white',
   },
   touchForgotPw: {
     marginTop: 20,
