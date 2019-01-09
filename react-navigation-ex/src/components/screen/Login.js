@@ -6,6 +6,7 @@ import {
   Text,
   TouchableOpacity,
   View,
+  ScrollView,
 } from 'react-native';
 
 import TextInput from '../shared/TextInput';
@@ -22,6 +23,12 @@ type State = {
 };
 
 export default class App extends Component<Props, State> {
+  static navigationOptions = {
+    headerStyle: {
+      borderBottomWidth: 0,
+    },
+  };
+
   constructor(props: Props) {
     super(props);
     this.state = {
@@ -32,67 +39,71 @@ export default class App extends Component<Props, State> {
   }
   render() {
     return (
-      <View style={styles.container}>
-        <View style={styles.iconWrapper}>
-          <Image style={styles.icon} source={ IC_APP }/>
-          <Text style={styles.iconTxt}>Hello</Text>
-        </View>
-        <View style={styles.wrapper}>
-          <View style={styles.wrapperInput}>
-            <TextInput
-              style={{ marginTop: 60 }}
-              txt={this.state.email}
-              txtHint='Please write email address.'
-              placeHolderTextColor={colors.blueyGray}
-              onTextChanged={(text) => {
-                this.onTextChanged('EMAIL', text);
-              }}
-            />
-            <TextInput
-              style={{ marginTop: 8 }}
-              txt={this.state.password}
-              txtHint='Please write password.'
-              placeHolderTextColor={colors.blueyGray}
-              onTextChanged={(text) => {
-                this.onTextChanged('PASSWORD', text);
-              }}
-              isPassword
-            />
+      <ScrollView>
+        <View style={styles.container}>
+          <View style={styles.iconWrapper}>
+            <Image style={styles.icon} source={ IC_APP }/>
+            <Text style={styles.iconTxt}>Hello</Text>
           </View>
-          <View style={styles.viewBtnWrapper}>
-            <Button
-              containerStyle={{ flex: 1 }}
-              onPress={() => {}}
-              style={styles.btnSignup}
-              textStyle={styles.txtSignup}
-            >Sign Up</Button>
-            <View style={{ width: 8 }}/>
-            <Button
-              containerStyle={{ flex: 1 }}
-              isLoading={this.state.isLoggingin}
-              onPress={() => {
-                this.setState({
-                  isLoggingin: true
-                }, () => {
-                  setTimeout(() => {
-                    this.setState({
-                      isLoggingin: false,
-                    });
-                  }, 3000);
-                })
-              }}
-              style={styles.btnLogin}
-              textStyle={styles.txtLogin}
-            >Login</Button>
+          <View style={styles.wrapper}>
+            <View style={styles.wrapperInput}>
+              <TextInput
+                style={{ marginTop: 60 }}
+                txt={this.state.email}
+                txtHint='Please write email address.'
+                placeHolderTextColor={colors.blueyGray}
+                onTextChanged={(text) => {
+                  this.onTextChanged('EMAIL', text);
+                }}
+              />
+              <TextInput
+                style={{ marginTop: 8 }}
+                txt={this.state.password}
+                txtHint='Please write password.'
+                placeHolderTextColor={colors.blueyGray}
+                onTextChanged={(text) => {
+                  this.onTextChanged('PASSWORD', text);
+                }}
+                isPassword
+              />
+            </View>
+            <View style={styles.viewBtnWrapper}>
+              <Button
+                containerStyle={{ flex: 1 }}
+                onPress={() => {
+                  this.props.navigation.navigate('Signup');
+                }}
+                style={styles.btnSignup}
+                textStyle={styles.txtSignup}
+              >Sign Up</Button>
+              <View style={{ width: 8 }}/>
+              <Button
+                containerStyle={{ flex: 1 }}
+                isLoading={this.state.isLoggingin}
+                onPress={() => {
+                  this.setState({
+                    isLoggingin: true
+                  }, () => {
+                    setTimeout(() => {
+                      this.setState({
+                        isLoggingin: false,
+                      });
+                    }, 3000);
+                  })
+                }}
+                style={styles.btnLogin}
+                textStyle={styles.txtLogin}
+              >Login</Button>
+            </View>
+            <TouchableOpacity
+              style={styles.touchForgotPw}
+            >
+              <Text style={styles.txtForgotPw}>Forgot password?</Text>
+            </TouchableOpacity>
+            <Text style={styles.txtCopyright}>copyright by dooboolab.com</Text>
           </View>
-          <TouchableOpacity
-            style={styles.touchForgotPw}
-          >
-            <Text style={styles.txtForgotPw}>Forgot password?</Text>
-          </TouchableOpacity>
-          <Text style={styles.txtCopyright}>copyright by dooboolab.com</Text>
         </View>
-      </View>
+      </ScrollView>
     );
   }
 
@@ -120,9 +131,8 @@ const styles = StyleSheet.create({
     alignSelf: 'stretch',
   },
   iconWrapper: {
-
     position: 'absolute',
-    top: 144,
+    top: 76,
     left: 40,
 
     flexDirection: 'column',

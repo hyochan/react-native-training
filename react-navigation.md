@@ -4,7 +4,9 @@ Some official libraries are listed below. Most popular one is `react-navigation`
 * [react-navigation](https://reactnavigation.org/)
   - [types of navigations in react-navigation-v3](https://medium.com/@dooboolab/type-of-navigations-in-react-navigation-v3-8ca9684170a4)
   - Try above navigation in [repo](https://github.com/dooboolab/react-navigation-v3-example)
-  - From `react-navigation v3`, we need to wrap navigations with [AppContainer](https://reactnavigation.org/docs/en/app-containers.html).
+  - From `react-navigation v3`
+    + You need to wrap navigations with [AppContainer](https://reactnavigation.org/docs/en/app-containers.html).
+    + You need to install [react-native-gesture-handler](https://github.com/kmagiera/react-native-gesture-handler)
 * [react-native-navigation](https://github.com/wix/react-native-navigation)
   - [guide for react-native-navigation-v2](https://medium.com/react-native-training/react-native-navigation-v2-by-wix-getting-started-7d647e944132)
 * [native-navigation](https://github.com/airbnb/native-navigation)

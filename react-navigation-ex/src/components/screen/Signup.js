@@ -22,6 +22,7 @@ type Styles = {
 
 const styles: Styles = StyleSheet.create({
   container: {
+    alignSelf: 'stretch',
     flex: 1,
     flexDirection: 'column', // row, column, row-reverse, column-reverse
     // primary axis
