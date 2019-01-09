@@ -15,4 +15,4 @@ Some official libraries are listed below. Most popular one is `react-navigation`
 
 ### Exercise
 * [Example Project](https://github.com/dooboolab/react-native-training/blob/master/react-navigation-ex)
-* [Screens Structure](https://github.com/dooboolab/react-native-training/blob/master/react-navigation-ex/navigation%20screens%20structure.png)
+![alt text](https://github.com/dooboolab/react-native-training/blob/master/react-navigation-ex/navigation%20screens%20structure.png)
