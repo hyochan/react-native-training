@@ -14,9 +14,11 @@ import {
   View,
 } from 'react-native';
 
-type Props = {};
+type Props = {
+  navigation: any,
+};
 export default class App extends Component<Props> {
-  timer;
+  timer: any;
 
   componentDidMount() {
     this.timer = setTimeout(() => {
