@@ -11,3 +11,5 @@
 #### 7. [Flow](https://github.com/dooboolab/react-native-training/blob/master/flow.md)
 
 #### 8. [React Navigation](https://github.com/dooboolab/react-native-training/blob/master/react-navigation.md)
+
+#### 9. [Jest & Enzyme](https://github.com/dooboolab/react-native-training/blob/master/jest-enzyme.md)
