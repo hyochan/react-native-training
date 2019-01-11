@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   View,
   ScrollView,
+  Alert,
 } from 'react-native';
 
 import TextInput from '../shared/TextInput';
@@ -15,11 +16,14 @@ import Button from '../shared/Button';
 import { IC_APP } from '../../utils/Icons';
 import { colors } from '../../utils/Styles';
 
-type Props = {};
+type Props = {
+  navigation: any;
+};
+
 type State = {
   email: string,
   password: string,
-  isLoggingin: boolean,
+  isLoggingIn: boolean,
 };
 
 export default class App extends Component<Props, State> {
@@ -34,7 +38,7 @@ export default class App extends Component<Props, State> {
     this.state = {
       email: '',
       password: '',
-      isLoggingin: false,
+      isLoggingIn: false,
     };
   }
   render() {
@@ -78,25 +82,17 @@ export default class App extends Component<Props, State> {
               >Sign Up</Button>
               <View style={{ width: 8 }}/>
               <Button
+                id='login'
                 containerStyle={{ flex: 1 }}
-                isLoading={this.state.isLoggingin}
-                onPress={() => {
-                  this.setState({
-                    isLoggingin: true
-                  }, () => {
-                    setTimeout(() => {
-                      this.setState({
-                        isLoggingin: false,
-                      });
-                    }, 3000);
-                  })
-                }}
+                isLoading={this.state.isLoggingIn}
+                onPress={() => this.onLogin()}
                 style={styles.btnLogin}
                 textStyle={styles.txtLogin}
               >Login</Button>
             </View>
             <TouchableOpacity
               style={styles.touchForgotPw}
+              onPress={this.goToForgotPw}
             >
               <Text style={styles.txtForgotPw}>Forgot password?</Text>
             </TouchableOpacity>
@@ -105,6 +101,22 @@ export default class App extends Component<Props, State> {
         </View>
       </ScrollView>
     );
+  }
+
+  onLogin = () => {
+    this.setState({
+      isLoggingIn: true
+    }, () => {
+      setTimeout(() => {
+        this.setState({
+          isLoggingIn: false,
+        });
+      }, 3000);
+    })
+  };
+
+  goToForgotPw = () => {
+    this.props.navigation.navigate('FindPw');
   }
 
   onTextChanged = (type: string, text: string) => {
@@ -123,7 +135,7 @@ export default class App extends Component<Props, State> {
   }
 }
 
-const styles = StyleSheet.create({
+export const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'column',

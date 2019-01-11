@@ -1,0 +1,294 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`rendering test should renders as expected 1`] = `
+<ScrollView>
+  <View
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "alignSelf": "stretch",
+        "flex": 1,
+        "flexDirection": "column",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "flex-start",
+          "flexDirection": "column",
+          "left": 40,
+          "position": "absolute",
+          "top": 76,
+        }
+      }
+    >
+      <Component
+        source={
+          Object {
+            "testUri": "../../../assets/icons/symbol.png",
+          }
+        }
+        style={
+          Object {
+            "height": 48,
+            "width": 60,
+          }
+        }
+      />
+      <Text
+        style={
+          Object {
+            "color": "rgb(65,77,107)",
+            "fontSize": 20,
+            "fontWeight": "bold",
+            "marginTop": 16,
+          }
+        }
+      >
+        Hello
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "flexDirection": "column",
+          "height": 300,
+          "marginTop": 260,
+          "width": "78%",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "flex-start",
+            "alignSelf": "stretch",
+            "flexDirection": "column",
+            "justifyContent": "flex-start",
+          }
+        }
+      >
+        <Shared
+          labelStyle={
+            Object {
+              "color": "rgb(134,154,183)",
+              "fontSize": 12,
+              "marginBottom": 8,
+            }
+          }
+          labelStyleFocus={
+            Object {
+              "color": "rgb(58,139,255)",
+              "fontSize": 12,
+              "marginBottom": 8,
+            }
+          }
+          onTextChanged={[Function]}
+          placeHolderTextColor="rgb(134,154,183)"
+          style={
+            Object {
+              "marginTop": 60,
+            }
+          }
+          txt=""
+          txtHint="Please write email address."
+        />
+        <Shared
+          isPassword={true}
+          labelStyle={
+            Object {
+              "color": "rgb(134,154,183)",
+              "fontSize": 12,
+              "marginBottom": 8,
+            }
+          }
+          labelStyleFocus={
+            Object {
+              "color": "rgb(58,139,255)",
+              "fontSize": 12,
+              "marginBottom": 8,
+            }
+          }
+          onTextChanged={[Function]}
+          placeHolderTextColor="rgb(134,154,183)"
+          style={
+            Object {
+              "marginTop": 8,
+            }
+          }
+          txt=""
+          txtHint="Please write password."
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "stretch",
+            "flexDirection": "row",
+            "height": 60,
+            "justifyContent": "space-between",
+            "marginTop": 20,
+          }
+        }
+      >
+        <Shared
+          containerStyle={
+            Object {
+              "flex": 1,
+            }
+          }
+          disabledStyle={
+            Object {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "backgroundColor": "rgb(243,243,243)",
+              "borderColor": "#333",
+              "borderRadius": 4,
+              "borderWidth": 2,
+              "height": "100%",
+              "justifyContent": "center",
+              "width": "100%",
+            }
+          }
+          imgLeftStyle={
+            Object {
+              "height": 24,
+              "left": 16,
+              "position": "absolute",
+              "width": 24,
+            }
+          }
+          indicatorColor="white"
+          isDisabled={false}
+          isLoading={false}
+          onPress={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "transparent",
+              "borderColor": "rgb(58,139,255)",
+              "borderRadius": 4,
+              "borderWidth": 1,
+              "height": "100%",
+              "justifyContent": "center",
+              "width": "100%",
+            }
+          }
+          textStyle={
+            Object {
+              "color": "rgb(58,139,255)",
+              "fontSize": 16,
+              "fontWeight": "bold",
+            }
+          }
+        >
+          Sign Up
+        </Shared>
+        <View
+          style={
+            Object {
+              "width": 8,
+            }
+          }
+        />
+        <Shared
+          containerStyle={
+            Object {
+              "flex": 1,
+            }
+          }
+          disabledStyle={
+            Object {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "backgroundColor": "rgb(243,243,243)",
+              "borderColor": "#333",
+              "borderRadius": 4,
+              "borderWidth": 2,
+              "height": "100%",
+              "justifyContent": "center",
+              "width": "100%",
+            }
+          }
+          id="login"
+          imgLeftStyle={
+            Object {
+              "height": 24,
+              "left": 16,
+              "position": "absolute",
+              "width": 24,
+            }
+          }
+          indicatorColor="white"
+          isDisabled={false}
+          isLoading={false}
+          onPress={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "rgb(58,139,255)",
+              "borderColor": "rgb(58,139,255)",
+              "borderRadius": 4,
+              "borderWidth": 1,
+              "height": 60,
+              "justifyContent": "center",
+              "shadowColor": "rgb(58,139,255)",
+              "shadowOffset": Object {
+                "height": 10,
+                "width": 0,
+              },
+              "shadowOpacity": 0.3,
+              "shadowRadius": 4,
+            }
+          }
+          textStyle={
+            Object {
+              "color": "white",
+              "fontSize": 16,
+              "fontWeight": "bold",
+            }
+          }
+        >
+          Login
+        </Shared>
+      </View>
+      <TouchableOpacity
+        activeOpacity={0.2}
+        onPress={[Function]}
+        style={
+          Object {
+            "marginTop": 20,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "rgb(58,139,255)",
+              "fontSize": 12,
+              "textDecorationLine": "underline",
+            }
+          }
+        >
+          Forgot password?
+        </Text>
+      </TouchableOpacity>
+      <Text
+        style={
+          Object {
+            "color": "rgb(175,194,219)",
+            "fontSize": 12,
+            "marginTop": 80,
+          }
+        }
+      >
+        copyright by dooboolab.com
+      </Text>
+    </View>
+  </View>
+</ScrollView>
+`;
