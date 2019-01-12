@@ -1,5 +1,9 @@
 # [Jest](https://jestjs.io/) & [Enzyme](https://airbnb.io/enzyme/)
 
+### Our work
+* At [jest-enzyme branch](https://github.com/dooboolab/react-native-training/tree/jest-enzyme)
+  - In `react-navigation-ex` directory.
+
 ### Installation
 * Jest
   ```
