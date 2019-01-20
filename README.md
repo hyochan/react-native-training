@@ -15,3 +15,5 @@
 #### 9. [Jest & Enzyme](https://github.com/dooboolab/react-native-training/blob/master/jest-enzyme.md)
 
 #### 10. [React Life Cycle](https://github.com/dooboolab/react-native-training/blob/master/react-life-cycle.md)
+
+#### 11. [React Native Animation](https://github.com/dooboolab/react-native-training/blob/master/react-native-animation.md)
