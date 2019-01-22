@@ -24,5 +24,6 @@
     - Doesn't actually changes the layout of the component. `Animated` applies transformations to components on the screen without changing the actual layout of components on the screen.
     - Control and animate specific views
     - Provide flexibility in crafting animations
-
+- Difference
+  ![Alt text](https://github.com/dooboolab/react-native-training/blob/master/images/layout_anim%20%26%20animated.png)
 
