@@ -24,6 +24,37 @@
     - Doesn't actually changes the layout of the component. `Animated` applies transformations to components on the screen without changing the actual layout of components on the screen.
     - Control and animate specific views
     - Provide flexibility in crafting animations
+  * Types of Animated
+    - [decay](https://facebook.github.io/react-native/docs/animated#decay)
+      + starts with an initial velocity and gradually slows to a stop.
+    - [timing](https://facebook.github.io/react-native/docs/animated#timing)
+      + animates a value over time using easing functions.
+    - [spring](https://facebook.github.io/react-native/docs/animated#spring)
+      + provides a simple spring physics model.
+    - [easing](https://facebook.github.io/react-native/docs/animated#easing)
+      + This is used by Animated.timing to convey physically believable motion in animations.
+    - [loop](https://facebook.github.io/react-native/docs/animated#loop)
+    - [stagger](https://facebook.github.io/react-native/docs/animated#stagger)
+    - [event](https://facebook.github.io/react-native/docs/animated#event)
+  * Composing Animation
+    - [parrallel](https://facebook.github.io/react-native/docs/animated#parrallel)
+      + starts a number of animations at the same time.
+    - [sequence](https://facebook.github.io/react-native/docs/animated#sequence)
+      + starts the animations in order, waiting for each to complete before starting the next.
+  * [Interpolation](https://facebook.github.io/react-native/docs/animated#interpolation)
+    - The interpolate function allows input ranges to map to different output ranges (number, degree, rgb, etc).
+  * Extrapolation
+    - The default value is extend but you can use clamp to prevent the output value from exceeding outputRange (extend, clamp, identity).
+    - Types
+      + extend (default)
+        - It will increate input proportionally.
+      + clamp
+        - It will stick to maximum value.
+      + identity
+        - It will be same as input value.
+
+
+
 - Difference
   ![Alt text](https://github.com/dooboolab/react-native-training/blob/master/images/layout_anim%20%26%20animated.png)
 
