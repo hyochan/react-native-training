@@ -58,3 +58,5 @@
 - Difference
   ![Alt text](https://github.com/dooboolab/react-native-training/blob/master/images/layout_anim%20%26%20animated.png)
 
+- Exercise resrouce
+  [Download Icons](https://firebasestorage.googleapis.com/v0/b/foodieon-292ad.appspot.com/o/icons.zip?alt=media&token=9a0ba214-d27d-42b1-9b1d-4aaee5244549)
