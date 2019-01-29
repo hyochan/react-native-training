@@ -60,3 +60,8 @@
 
 - Exercise resrouce
   * [Download Icons](https://firebasestorage.googleapis.com/v0/b/foodieon-292ad.appspot.com/o/icons.zip?alt=media&token=9a0ba214-d27d-42b1-9b1d-4aaee5244549)
+  * Final results
+    + Roadmap
+      ![Alt text](https://github.com/dooboolab/react-native-training/blob/master/images/task_roadmap.png)
+    + Result
+      ![Alt text](https://github.com/dooboolab/react-native-training/blob/master/images/task_result.gif)
