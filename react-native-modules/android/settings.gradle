@@ -1,0 +1,3 @@
+rootProject.name = 'RNModules'
+
+include ':app'
