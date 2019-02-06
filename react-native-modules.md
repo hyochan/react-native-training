@@ -6,10 +6,122 @@
 
 ### iOS
 - [Native Module](https://facebook.github.io/react-native/docs/native-modules-ios)
+  + Create new `Cocoa Touch Class`. This will create two files(.h, .m).
+  + Import RCTBridgeModule in `header` file.
+    ```
+    #import <React/RCTBridgeModule.h>
+    @interface Console : NSObject <RCTBridgeModule>
+    ```
+  + Export RCT Module.
+    ```
+    RCT_EXPORT_MODULE();
+    ```
+  + Implement methods.
+    - Callback
+      ```
+      RCT_EXPORT_METHOD(writeText:(NSString *)text callback: (RCTResponseSenderBlock)callback) {
+        if([text isEqualToString:@"Error"]) {
+          callback(@[@"Text is Error.", [NSNull null]]);
+        } else {
+          callback(@[[NSNull null], text]);
+        }
+      }
+      ```
+    - Promise
+      ```
+      RCT_EXPORT_METHOD(writeTextWithPromise:(NSString *)text resolve:(RCTPromiseResolveBlock)resolve
+                        reject:(RCTPromiseRejectBlock)reject) {
+        if([text isEqualToString:@"Error"]) {
+          reject(@"Console", @"Text is Error.", nil);
+        } else {
+          resolve(text);
+        }
+      }
+      ```
+  + Sending events from native module.
+    - Import RCT Emitter.
+      ```
+      #import <React/RCTEventEmitter.h>
+      @interface Console : RCTEventEmitter <RCTBridgeModule>
+      ```
+    - Add event names.
+      ```
+      - (NSArray<NSString *> *)supportedEvents
+      {
+        return @[@"my_event"];
+      }
+      ```
+    - Send event from where you want.
+      ```
+      [self sendEventWithName:@"my_event" body:json];
+      ```
 - [Native Module UI](https://facebook.github.io/react-native/docs/native-components-ios)
 
 ### Android
 - [Native Module](https://facebook.github.io/react-native/docs/native-modules-android)
+  + Add package.
+    ```
+    public class MyPackage implements ReactPackage {
+        @Override
+        public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
+            return Arrays.<NativeModule>asList(new MyModule(reactContext));
+        }
+
+        @Override
+        public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
+            return Collections.emptyList();
+        }
+    }
+    ```
+  + Add module.
+    ```
+    public class MyModule extends ReactContextBaseJavaModule {
+        final private static String TAG = "MyModule";
+        private final ReactApplicationContext reactContext;
+
+        public MyModule(ReactApplicationContext reactContext) {
+            super(reactContext);
+            this.reactContext = reactContext;
+        }
+    }
+    ```
+  + Add package to `MainApplication.java`.
+    ```
+    @Override
+    protected List<ReactPackage> getPackages() {
+      return Arrays.<ReactPackage>asList(
+          new MainReactPackage(),
+            new MyPackage()
+      );
+    }
+    ```
+  + Implement methods.
+    - Callback
+      ```
+      @ReactMethod
+      public void myMethod(String text, final Callback cb) {
+        if (text.equals("Error")) {
+          cb.invoke("Text is Error.", null);
+        } else {
+          cb.invoke(null, text);
+        }
+      }
+      ```
+    - Promise
+      ```
+      @ReactMethod
+      public void myMethod(String text, Promise promise) {
+        if (text.equals("Error")) {
+          promise.reject("ERROR", "Text is Error.");
+        } else {
+          promise.resolve(text);
+        }
+      }
+      ```
+  + Sending events from native module.
+    ```
+    sendEvent(reactContext, "my_event", json);
+    ```
 - [Native Module UI](https://facebook.github.io/react-native/docs/native-modules-android)
 
 ## Creating Native Module Helper
