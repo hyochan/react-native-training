@@ -1,5 +1,5 @@
 # React Native Modules
-[Alt text](https://github.com/dooboolab/react-native-training/blob/master/images/rnmodules.png)
+![Alt text](https://github.com/dooboolab/react-native-training/blob/master/images/rnmodules.png)
 1. Implement `Native Modules` in each platform(ios, android).
 2. Call your `Native Modules` you've implemented.
    - You can also send events from `Native Modules`.
