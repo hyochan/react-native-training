@@ -159,6 +159,27 @@
     sendEvent(reactContext, "my_event", json);
     ```
 - [Native Module UI](https://facebook.github.io/react-native/docs/native-modules-android)
+  + `react-native new-module`
+    - Select Module Name (ex: MyButton)
+    - Select Native UI
+  + Above will create native UI instantly.
+    - In `android` you should add `MyButtonPackage` in `MainApplication` to add its dependency.
+  + To add component event add below in `MyButtonManager.java`.
+    ```
+    @Nullable
+    @Override
+    public Map getExportedCustomDirectEventTypeConstants() {
+        return MapBuilder.of(
+          "onMyClick", MapBuilder.of("registrationName", "onMyClick")
+        );
+    }
+    ```
+  + Send event to `js`.
+    ```
+    WritableMap event = Arguments.createMap();
+    event.putString("click", "button")
+    reactContext.getJSModule(RCTEventEmitter.class).receiveEvent(view.getId(), "onMyClick", event);
+    ```
 
 ## Creating Native Module Helper
 - [React Native Create Bridge](https://github.com/peggyrayzis/react-native-create-bridge)
