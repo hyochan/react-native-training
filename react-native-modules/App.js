@@ -95,7 +95,7 @@ export default class App extends Component<Props, State> {
             );
           }
         }}/>
-        {/* <MyButton
+        <MyButton
           onMyClick={(evt) => {
             console.log('onMyClick', evt.nativeEvent);
           }}
@@ -104,7 +104,7 @@ export default class App extends Component<Props, State> {
             height: 150,
             backgroundColor: 'red',
           }}
-        /> */}
+        />
       </View>
     );
   }
