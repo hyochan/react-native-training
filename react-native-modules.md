@@ -55,7 +55,37 @@
       ```
       [self sendEventWithName:@"my_event" body:json];
       ```
+    - In javascript file, import `NativeEventEmitter` from `react-native` and add below.
+      ```
+      const { Console: RNConsole } = NativeModules;
+      const emitter = new NativeEventEmitter(RNConsole);
+      ```
+    - Add subscription in `js`.
+      ```
+      const subscription = emitter.addListener(
+        'my_event',
+        (evt) => console.log('event', evt)
+      );
+      ```
 - [Native Module UI](https://facebook.github.io/react-native/docs/native-components-ios)
+  + `react-native new-module`
+    - Select Module Name (ex: MyButton)
+    - Select Native UI
+  + Above will create native UI instantly.
+  + To add component event add below in `MyButton.h`.
+    ```
+    @property (nonatomic, copy) RCTBubblingEventBlock onMyClick;
+    ```
+  + Then in `MyButton.m` you can call it.
+    ```
+    self.onMyClick(@{
+                   @"value": @"clicked"
+                   });
+    ```
+  + Don't forget to `EXPORT_VIEW_PROPERTY` in `MyButtonManager.h`
+    ```
+    RCT_EXPORT_VIEW_PROPERTY(onMyClick, RCTBubblingEventBlock)
+    ```
 
 ### Android
 - [Native Module](https://facebook.github.io/react-native/docs/native-modules-android)
@@ -120,6 +150,12 @@
       ```
   + Sending events from native module.
     ```
+    private void sendEvent(ReactContext reactContext, String eventName, @Nullable WritableMap params) {
+      reactContext
+        .getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
+        .emit(eventName, params);
+    }
+
     sendEvent(reactContext, "my_event", json);
     ```
 - [Native Module UI](https://facebook.github.io/react-native/docs/native-modules-android)
