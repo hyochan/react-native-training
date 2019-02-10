@@ -1,7 +1,7 @@
 # React Native Global State Management
 1. [Redux](https://github.com/dooboolab/react-native-training/blob/master/react-native-global-state.md#redux)
 2. [Mobx](https://github.com/dooboolab/react-native-training/blob/master/react-native-global-state.md#mobx)
-3. Context Api
+3. [Context Api](https://github.com/dooboolab/react-native-training/blob/master/react-native-global-state.md#context-api)
 
 ### Redux
 ![Alt text](https://cdn-images-1.medium.com/max/1600/1*87dJ5EB3ydD7_AbhKb4UOQ.png)
