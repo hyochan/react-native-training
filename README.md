@@ -19,3 +19,5 @@
 #### 11. [React Native Animation](https://github.com/dooboolab/react-native-training/blob/master/react-native-animation.md)
 
 #### 12. [React Native Modules](https://github.com/dooboolab/react-native-training/blob/master/react-native-modules.md)
+
+#### 13. [React Native Global State Management](https://github.com/dooboolab/react-native-training/blob/master/react-native-global-state.md)
