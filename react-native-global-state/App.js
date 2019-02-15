@@ -9,8 +9,9 @@
 
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View, TextInput} from 'react-native';
-// import ReduxApp from './src/ReduxApp';
+import ReduxApp from './src/ReduxApp';
 import MobxApp from './src/MobxApp';
+import ContextApiApp from './src/ContextApiApp';
 
 type Props = {};
 export default class App extends Component<Props> {
@@ -18,7 +19,8 @@ export default class App extends Component<Props> {
     return (
       <View style={{ flex: 1}}>
         {/* <ReduxApp/> */}
-        <MobxApp/>
+        {/* <MobxApp/> */}
+        <ContextApiApp/>
       </View>
     );
   }

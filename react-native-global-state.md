@@ -131,3 +131,61 @@
   ```
 
 ### Context Api
+![Alt text](https://cmichel.io/static/react-context-vs-hoc-5088656af004c68bc31df9e3990e0340-d5582.png)
+
+> No installation needed. This is already in `react` library in `16.3.+`.
+
+1. Create your own Provider
+  ```
+  import React, { createContext } from 'react';
+
+  const AppContext = React.createContext();
+  const AppConsumer = AppContext.Consumer;
+
+  type Props = { };
+  export type State = {
+    inputText: string,
+  };
+
+  const initialState: State = {
+    inputText: '',
+  };
+
+  class AppProvider extends React.Component<Props, State> {
+    constructor(props) {
+      super(props);
+      this.state = initialState;
+    }
+
+    actions = {
+      onUpdateText: (text: string) => {
+        this.setState({
+          inputText: text,
+        });
+      },
+    };
+
+    render() {
+      const { state, actions } = this;
+      const store = { state, actions };
+      return (
+        <AppContext.Provider value={store}>
+          {this.props.children}
+        </AppContext.Provider>
+      );
+    }
+  }
+  export { AppConsumer, AppProvider };
+  ```
+2. Wrap with provider
+  ```
+  <AppProvider>
+  ```
+3. From component where you want to use it, wrap with `Consumer`. You will be able to get `state` and `actions` variables.
+  ```
+  <AppConsumer>
+    {
+      (data) => <YourComponent/>
+    }
+  </AppConsumer>
+  ```
