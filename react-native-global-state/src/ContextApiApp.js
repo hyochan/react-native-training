@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View, TextInput} from 'react-native';
+import { AppConsumer, AppProvider } from '../providers/InputProvider';
 
 const styles = StyleSheet.create({
   container: {
@@ -44,9 +45,9 @@ class View1 extends Component {
         <Text style={styles.text1}>View 1</Text>
         <TextInput
           style={styles.input}
-          value={this.props.inputText}
+          value={this.props.state.inputText}
           onChangeText={(text) => {
-            this.props.onUpdateText(text);
+            this.props.actions.onUpdateText(text);
           }}
         />
       </View>
@@ -61,9 +62,9 @@ class View2 extends Component {
         <Text style={styles.text2}>View 2</Text>
         <TextInput
           style={styles.input}
-          value={this.props.inputText}
+          value={this.props.state.inputText}
           onChangeText={(text) => {
-            this.props.onUpdateText(text);
+            this.props.actions.onUpdateText(text);
           }}
         />
       </View>
@@ -75,10 +76,20 @@ type Props = {};
 export default class App extends Component<Props> {
   render() {
     return (
-      <View style={styles.container}>
-        <View1/>
-        <View2/>
-      </View>
+      <AppProvider>
+        <AppConsumer>
+          {
+            (data) => {
+              return (
+                <View style={styles.container}>
+                  <View1 {...data}/>
+                  <View2 {...data}/>
+                </View>
+              );
+            }
+          }
+        </AppConsumer>
+      </AppProvider>
     );
   }
 }
