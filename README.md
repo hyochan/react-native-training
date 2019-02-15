@@ -21,3 +21,5 @@
 #### 12. [React Native Modules](https://github.com/dooboolab/react-native-training/blob/master/react-native-modules.md)
 
 #### 13. [React Native Global State Management](https://github.com/dooboolab/react-native-training/blob/master/react-native-global-state.md)
+
+#### 14. [Releasing App](https://github.com/dooboolab/react-native-training/blob/master/releasing-app.md)
