@@ -1,4 +1,4 @@
-# React Native Global State Management
+# Release React Native App
 ![Alt text](https://user-images.githubusercontent.com/27461460/52886121-a1362580-31b6-11e9-92e5-cd2b68a83330.png)
 
 ### Release iOS
