@@ -23,3 +23,5 @@
 #### 13. [React Native Global State Management](https://github.com/dooboolab/react-native-training/blob/master/react-native-global-state.md)
 
 #### 14. [Releasing App](https://github.com/dooboolab/react-native-training/blob/master/releasing-app.md)
+
+#### 15. [What's not Covered](https://github.com/dooboolab/react-native-training/blob/master/not-covered.md)
