@@ -7,6 +7,12 @@
    - Also checkout [React Native Firebase](https://github.com/invertase/react-native-firebase)
 4. [Apollo Client](https://www.apollographql.com/docs/react/)
 
+### More about react
++ Some of thems are listed below.
+  - [react-hooks]
+    + Released in 16.8.
+    + Rise of functional components
+
 ### [Expo](https://docs.expo.io/versions/latest/)
 
 ### [dooboo-cli](https://github.com/dooboolab/dooboo-cli)
