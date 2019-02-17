@@ -22,5 +22,13 @@
 ### [Styled-Component](https://www.styled-components.com/docs/basics#installation)
 + Help making components more identical in both web and native.
 
+### Push Notification
++ I recommend you to use [react-native-onesignal](https://github.com/geektimecoil/react-native-onesignal) because you are not recommended to use pod` project for `ios` which isn't primarily supported for `react-native`.
++ Firebase Cloud Messaging can be used for both `ios` and `android` and you can refer to [react-native-firebase](https://github.com/invertase/react-native-firebase)(note that [react-native-fcm](https://github.com/evollu/react-native-fcm) has been deprecated).
+
+### [React Native Code Push](https://github.com/Microsoft/react-native-code-push)
++ This is great technology from `microsoft`. By using this, you don't need to upload new app to each store(playstore for `android`, appstore for `ios`) if you only updated `javascript`.
+  - Note that [expo](https://expo.io) is using their own so you don't need this when you want it.
+
 ### Open Source Project
 + [TalkTalk](https://github.com/dooboolab/talktalk-rn)
