@@ -15,7 +15,15 @@
     + Checkout sample [changes](https://github.com/dooboolab/dooboo-frontend-js/pull/6)
 
 ### [Expo](https://docs.expo.io/versions/latest/)
-+ Test is little more difficult.
+- PROS
+  + Serveral good native modules already implemented.
+  + Easy integrated `code-push` [alternative](https://docs.expo.io/versions/v32.0.0/workflow/publishing/).
+- CONS
+  + Type support.
+    - Late typescript support.
+    - No flow support.
+  + Test is little more difficult.
+    - Jest test isn't well tested before the release of new `expo` version.
 
 ### [dooboo-cli](https://github.com/dooboolab/dooboo-cli)
 ![Alt text](https://camo.githubusercontent.com/a301e5bf20b7e9d723beee268e72797ee3742b4a/68747470733a2f2f666972656261736573746f726167652e676f6f676c65617069732e636f6d2f76302f622f626f6f6b6f6f2d38396636632e61707073706f742e636f6d2f6f2f646f6f626f6f2e706e673f616c743d6d6564696126746f6b656e3d65303331373837302d383532352d343837382d396636312d616230666336616233356561)
