@@ -8,10 +8,11 @@
 4. [Apollo Client](https://www.apollographql.com/docs/react/)
 
 ### More about react
-+ Some of thems are listed below.
++ Some of them are listed below.
   - [react-hooks](https://reactjs.org/docs/hooks-overview.html)
     + Released in [16.8](https://github.com/facebook/react/blob/master/CHANGELOG.md#1680-february-6-2019).
     + Rise of functional components
+    + Checkout sample [changes](https://github.com/dooboolab/dooboo-frontend-js/pull/6)
 
 ### [Expo](https://docs.expo.io/versions/latest/)
 + Test is little more difficult.
