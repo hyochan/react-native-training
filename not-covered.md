@@ -5,6 +5,8 @@
 2. [Axios](https://github.com/axios/axios)
 3. [Firebase](https://www.npmjs.com/package/firebase)
    - Also checkout [React Native Firebase](https://github.com/invertase/react-native-firebase)
+   - [Sample](https://www.dooboo.io/talktalk.html)
+     + Note that this is web version of firebase sdk.
 4. [Apollo Client](https://www.apollographql.com/docs/react/)
 
 ### More about react
